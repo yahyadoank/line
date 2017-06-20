@@ -64,7 +64,7 @@ public class EchoApplication {
         Random rand = new Random();
         int random = rand.nextInt(4);
 
-        listKata ="";
+        String listKata ="";
         for (Strng s : kasarConstants){
             listKata +=s +" ";
         }

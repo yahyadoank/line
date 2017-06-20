@@ -56,9 +56,8 @@ public class EchoApplication {
         String msgReturn = "";
         String greetingConstants = "halo|hallo|hello|allo|hai|hy|hi|hey|oi|kerang ajaib|halo kerang ajaib|hy kerang";
         String thanksConstants = "thanks|ok thanks|thank you|terima kasih|makasih|makasih ya|ok makasih";
-        String doConstants = "apa yang harus aku lakukan|apa yg harus aku lakukan|apa yang harus aku lakukan?|apa yg harus aku lakukan?|apa yang harus saya lakukan|apa yg harus saya lakukan|apa yang harus saya lakukan?|apa yg harus saya lakukan?|apa yang harus gue lakukan|apa yg harus gue lakukan|apa yang harus gue lakukan?|apa yg harus gue lakukan?|apa yang harus gw lakukan|apa yg harus gw lakukan|apa yang harus gw lakukan?|apa yg harus gw lakukan?|apa yang harus kita lakukan|apa yg harus kita lakukan|apa yang harus kita lakukan?|apa yg harus kita lakukan?";
-        String askConstants = "mau nanya|mau nanya nih|mau nanya dong|aku mau nanya|saya mau nanya|gue mau nanya|gw mau nanya|minta saran dong|gw kan belom nanya|gue kan belom nanya";
-        String askzConstants = "apa|apa?|apanya|apanya?";
+        String makanConstants = "makan|minum|cafe|resto";
+        String askConstants = "apa|apa?|apanya|apanya?";
         String lieConstants = "bohong kau|boong kau|bener bohong|bener boong|iya aja sih|iya ajalah|iya gue bilang|iya gw bilang|tapi sepertinya iya kan";
         String asalConstants = "bodoh|dasar bodoh|palalu|stupid|dasar stupid|anjing|anjing lo|bego|dungu|tolol|fuck|asshole|bitch";
         String bodoConstants = "ga tau melulu|dasar payah|masa gitu aja ga tau|kok ngeselin sih|kok kzl ya";
@@ -71,13 +70,16 @@ public class EchoApplication {
         else if (thanksConstants.contains(msg.toLowerCase())) {
             msgReturn = thanksListReturn[rand.nextInt(thanksListReturn.length)];
         }
-        else if (doConstants.contains(msg.toLowerCase())) {
+        else if (msg.contains("lakukan")) {
             msgReturn = "tidak ada";
         }
-        else if (askConstants.contains(msg.toLowerCase())) {
+        else if (msg.contains("nanya")) {
             msgReturn = "iya silakan";
         }
-        else if (askzConstants.contains(msg.toLowerCase())) {
+        else if (makanConstants.contains(msg.toLowerCase())) {
+            msgReturn = "cari aja di https://www.zomato.com/";
+        }
+        else if (askConstants.contains(msg.toLowerCase())) {
             msgReturn = "itunya";
         }
         else if (lieConstants.contains(msg.toLowerCase())) {
@@ -91,9 +93,6 @@ public class EchoApplication {
         } 
         else if (fufuConstants.contains(msg.toLowerCase())) {
             msgReturn = "fufufu ~ \n ╰(▔∀▔)╯";
-        }   
-        else if (msg.contains("jones")) {
-            msgReturn = "jangan sebut nama itu";
         }     
         else if (random == 2) {
             msgReturn = "iya";

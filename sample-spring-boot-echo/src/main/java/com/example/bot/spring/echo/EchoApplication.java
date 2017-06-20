@@ -92,7 +92,7 @@ public class EchoApplication {
         else if (fufuConstants.contains(msg.toLowerCase())) {
             msgReturn = "fufufu ~ \n ╰(▔∀▔)╯";
         }   
-        else if (msg.contains("jone")) {
+        else if (msg.contains("jones")) {
             msgReturn = "jangan sebut nama itu";
         }     
         else if (random == 2) {

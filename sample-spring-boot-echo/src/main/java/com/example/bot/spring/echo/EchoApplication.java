@@ -55,7 +55,7 @@ public class EchoApplication {
         String[] arrDoing = {"lakukan","ngapain"};
         String msg = event.getMessage().getText();
         String msgReturn = "";
-        String greetingConstants = "halo|hallo|hello|allo|hai|hy|hi|hey|oi|kerang ajaib|halo kerang ajaib|hy kerang|cuy";
+        String greetingConstants = "halo|hallo|hello|allo|hai|hy|hi|hey|oi|kerang ajaib|halo kerang ajaib|hy kerang|cuy|bro";
         String thanksConstants = "thanks|ok thanks|thank you|terima kasih|makasih|makasih ya|ok makasih";
         String makanConstants = "makan|minum|cafe|resto";
         String askConstants = "apa|apa?|apanya|apanya?";
@@ -77,7 +77,7 @@ public class EchoApplication {
         else if(Arrays.asList(arrDoing).contains(msg.toLowerCase())) {
             msgReturn = "tidak ada";
         }
-        else if (msg.contains("nanya")) {
+        else if (msg.contains("nanya") || msg.contains("tanyakan") {
             msgReturn = "iya silakan";
         }
         else if (makanConstants.contains(msg.toLowerCase())) {

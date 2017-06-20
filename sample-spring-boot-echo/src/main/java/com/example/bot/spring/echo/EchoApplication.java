@@ -60,8 +60,15 @@ public class EchoApplication {
         String lieConstants = "bohong kau|boong kau|bener bohong|bener boong|iya aja sih|iya ajalah|iya gue bilang|iya gw bilang|tapi sepertinya iya kan";
         String[] kasarConstants = {"bodoh","stupid","tolol","dungu","bego","anjing","fuck","asshole","bitch"};
         String bodoConstants = "ga tau melulu|dasar payah|masa gitu aja ga tau|kok ngeselin sih|kok kzl ya";
+        
         Random rand = new Random();
         int random = rand.nextInt(4);
+
+        listKata ="";
+        for (Strng s : kasarConstants){
+            listKata +=s;
+        }
+
         if (greetingConstants.contains(msg.toLowerCase())) {
             msgReturn = greetingListReturn[rand.nextInt(greetingListReturn.length)];
         }
@@ -83,7 +90,7 @@ public class EchoApplication {
         else if (lieConstants.contains(msg.toLowerCase())) {
             msgReturn = "tidak";
         }
-        else if (Arrays.asList(kasarConstants).contains(msg.toLowerCase())) {
+        else if (listKata.contains(msg.toLowerCase())) {
             msgReturn = "jangan kasar!";
         }
         else if (bodoConstants.contains(msg.toLowerCase())) {

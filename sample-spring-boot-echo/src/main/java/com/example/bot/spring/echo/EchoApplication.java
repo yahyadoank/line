@@ -83,7 +83,7 @@ public class EchoApplication {
         else if (lieConstants.contains(msg.toLowerCase())) {
             msgReturn = "tidak";
         }
-        else if (msg.contains(kasarConstants)) {
+        else if (msg.trim().contains(kasarConstants)) {
             msgReturn = "jangan kasar!";
         }
         else if (bodoConstants.contains(msg.toLowerCase())) {

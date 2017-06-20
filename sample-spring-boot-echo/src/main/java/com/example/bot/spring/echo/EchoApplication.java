@@ -52,6 +52,7 @@ public class EchoApplication {
         System.out.println("event: " + event);
         String[] greetingListReturn = {"ya","oit","whats up"};
         String[] thanksListReturn = {"ya sama-sama","sama-sama bosku"};
+        String[] arrDoing = {"lakukan","ngapain"}
         String msg = event.getMessage().getText();
         String msgReturn = "";
         String greetingConstants = "halo|hallo|hello|allo|hai|hy|hi|hey|oi|kerang ajaib|halo kerang ajaib|hy kerang|cuy";
@@ -70,7 +71,11 @@ public class EchoApplication {
         else if (thanksConstants.contains(msg.toLowerCase())) {
             msgReturn = thanksListReturn[rand.nextInt(thanksListReturn.length)];
         }
-        else if (msg.contains("lakukan|ngapain")) {
+        // else if (msg.contains("lakukan|ngapain")) {
+        //     msgReturn = "tidak ada";
+        // }
+        else if(Arrays.asList(arrDoing).contains(msg.toLowerCase()))
+        {
             msgReturn = "tidak ada";
         }
         else if (msg.contains("nanya")) {

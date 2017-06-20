@@ -56,18 +56,9 @@ public class EchoApplication {
         String msgReturn = "";
         String greetingConstants = "halo|hallo|hello|allo|hai|hy|hi|hey|oi|kerang ajaib|halo kerang ajaib|hy kerang|cuy|bro";
         String thanksConstants = "thanks|ok thanks|thank you|terima kasih|makasih|makasih ya|ok makasih";
-        String askConstants = "apa|apa?|apanya|apanya?";
-        String lieConstants = "bohong kau|boong kau|bener bohong|bener boong|iya aja sih|iya ajalah|iya gue bilang|iya gw bilang|tapi sepertinya iya kan";
-        String kasarConstants = "bodoh stupid tolol dungu bego anjing fuck asshole bitch";
-        String bodoConstants = "ga tau melulu|dasar payah|masa gitu aja ga tau|kok ngeselin sih|kok kzl ya";
         
         Random rand = new Random();
         int random = rand.nextInt(4);
-
-        // String listKata ="";
-        // for (Strng s : kasarConstants){
-        //     listKata +=s +" ";
-        // }
 
         if (greetingConstants.contains(msg.toLowerCase())) {
             msgReturn = greetingListReturn[rand.nextInt(greetingListReturn.length)];
@@ -81,21 +72,16 @@ public class EchoApplication {
         else if (msg.contains("nanya") || msg.contains("tanyakan")) {
             msgReturn = "iya silakan";
         }
-        else if (msg.contains("makan") || msg.contains("minum")) {
+        else if (msg.contains("makan") || msg.contains("minum") || msg.contains("cafe") || msg.contains("resto") || msg.contains("lapar") || msg.contains("laper")) {
             msgReturn = "cari aja di https://www.zomato.com/";
         }
-        else if (askConstants.contains(msg.toLowerCase())) {
-            msgReturn = "itunya";
-        }
-        else if (lieConstants.contains(msg.toLowerCase())) {
+        else if (msg.contains("bohong") || msg.contains("boong")) {
             msgReturn = "tidak";
         }
-        else if (kasarConstants.contains(msg.toLowerCase())) {
+        else if (msg.contains("bodoh") || msg.contains("stupid") || msg.contains("tolol") || msg.contains("dungu") || msg.contains("bego") || msg.contains("anjing") || msg.contains("fuck") || msg.contains("asshole") || msg.contains("bitch")) {
             msgReturn = "jangan kasar!";
         }
-        else if (bodoConstants.contains(msg.toLowerCase())) {
-            msgReturn = "biarin \n (￣ヘ￣)";
-        }     
+    
         else if (random == 2) {
             msgReturn = "iya";
         }

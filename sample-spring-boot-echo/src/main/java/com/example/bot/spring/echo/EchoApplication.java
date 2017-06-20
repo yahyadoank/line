@@ -66,7 +66,7 @@ public class EchoApplication {
 
         listKata ="";
         for (Strng s : kasarConstants){
-            listKata +=s;
+            listKata +=s +" ";
         }
 
         if (greetingConstants.contains(msg.toLowerCase())) {

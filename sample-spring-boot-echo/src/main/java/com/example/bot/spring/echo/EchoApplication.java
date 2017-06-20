@@ -77,7 +77,7 @@ public class EchoApplication {
         else if(Arrays.asList(arrDoing).contains(msg.toLowerCase())) {
             msgReturn = "tidak ada";
         }
-        else if (msg.contains("nanya") || msg.contains("tanyakan")) {
+        else if (msg.contains("nanya") && msg.contains("tanyakan")) {
             msgReturn = "iya silakan";
         }
         else if (makanConstants.contains(msg.toLowerCase())) {

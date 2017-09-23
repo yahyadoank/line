@@ -58,7 +58,7 @@ public class EchoApplication {
         String thanksConstants = "thanks|ok thanks|thank you|terima kasih|makasih|makasih ya|ok makasih";
         
         Random rand = new Random();
-        int random = rand.nextInt(4);
+        int random = rand.nextInt(2);
 
         if (greetingConstants.contains(msg.toLowerCase())) {
             msgReturn = greetingListReturn[rand.nextInt(greetingListReturn.length)];
@@ -72,9 +72,6 @@ public class EchoApplication {
         else if (msg.contains("nanya") || msg.contains("tanyakan")) {
             msgReturn = "iya silakan";
         }
-        else if (msg.contains("makan") || msg.contains("minum") || msg.contains("cafe") || msg.contains("resto") || msg.contains("lapar") || msg.contains("laper")) {
-            msgReturn = "cari aja di https://www.zomato.com/";
-        }
         else if (msg.contains("bohong") || msg.contains("boong")) {
             msgReturn = "tidak";
         }
@@ -82,17 +79,11 @@ public class EchoApplication {
             msgReturn = "jangan kasar!";
         }
     
-        else if (random == 2) {
+        else if (random == 1) {
             msgReturn = "iya";
         }
-        else if (random == 1) {
-            msgReturn = "tidak";
-        }
-        else if (random == 0) {
-            msgReturn = "tidak tau";
-        }
         else {
-            msgReturn = "coba tanya yg lain";
+            msgReturn = "tidak";
         }
         return new TextMessage(msgReturn);
 
